@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Most Atmospheric Places in Monaco in the Early Morning — Faraway Postcards</title>
+<meta name="description" content="A slow, cinematic guide to Monaco before the crowds — the squares, harbors, gardens and staircases of the Principality in the early morning light.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7F1;--paper:#fff;--ink:#1B1916;--soft:#6F675D;
+    --line:rgba(27,25,22,.12);--clay:#B5613C;--clay-d:#9a4f30;--sand:#ECC9A6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+  .cor{font-family:'Cormorant Garamond',serif}
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+
+  /* NAV */
+  header{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
+  header.solid{background:rgba(250,247,241,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:84px;color:#fff;transition:color .4s}
+  header.solid nav{color:var(--ink)}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:27px;letter-spacing:.01em;font-weight:500}
+  .navlinks{display:flex;gap:42px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  .navlinks a{opacity:.85;transition:opacity .25s,color .25s}
+  .navlinks a:hover{opacity:1;color:var(--clay)}
+  .navcta{font-size:12px;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.55);padding:11px 22px;border-radius:999px;transition:.3s}
+  header.solid .navcta{border-color:var(--ink)}
+  .navcta:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+
+  /* ARTICLE HERO */
+  .a-hero{position:relative;height:90vh;min-height:620px;max-height:840px;overflow:hidden;display:flex;align-items:flex-end}
+  .a-hero .bg{position:absolute;inset:0}
+  .a-hero .bg img{transform:scale(1.04);animation:kb 20s ease-out forwards}
+  @keyframes kb{to{transform:scale(1.12)}}
+  .a-hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.5),rgba(20,16,12,.1) 40%,rgba(20,16,12,.78))}
+  .a-hero-in{position:relative;z-index:2;color:#fff;padding-bottom:64px;max-width:960px}
+  .crumbs{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);margin-bottom:22px;display:flex;gap:10px;align-items:center}
+  .crumbs a:hover{color:#fff}
+  .crumbs .sep{opacity:.5}
+  .a-cat{display:inline-block;white-space:nowrap;background:var(--clay);color:#fff;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:22px}
+  .a-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5.4vw,74px);line-height:1.04;font-weight:500;margin-bottom:22px;max-width:15ch}
+  .a-meta{display:flex;gap:24px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+  .a-meta span{position:relative;padding-left:24px}
+  .a-meta span::before{content:"";position:absolute;left:0;top:50%;width:10px;height:1px;background:var(--sand)}
+  .a-meta span:first-child{padding-left:0}.a-meta span:first-child::before{display:none}
+
+  /* ARTICLE BODY */
+  .article{padding:84px 0 40px}
+  .measure{max-width:760px;margin:0 auto;padding:0 28px}
+  .lede{font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1.5;color:var(--ink);font-style:italic;margin-bottom:40px}
+  .article p{font-size:18.5px;line-height:1.78;color:#34302a;margin-bottom:26px}
+  .article p.intro::first-letter{font-family:'Cormorant Garamond',serif;font-size:78px;line-height:.72;float:left;padding:8px 14px 0 0;color:var(--clay);font-weight:500}
+  .article h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;line-height:1.12;margin:56px 0 22px;padding-top:8px}
+  .article h2::before{content:"";display:block;width:48px;height:3px;background:var(--clay);margin-bottom:22px}
+  figure{margin:46px 0}
+  figure.wide{max-width:1080px;margin-left:auto;margin-right:auto;padding:0 28px}
+  figure .fr{aspect-ratio:16/10;overflow:hidden;border-radius:6px}
+  figcaption{font-size:13px;color:var(--soft);margin-top:12px;letter-spacing:.02em;font-style:italic;text-align:center}
+
+  /* ROUTE highlight */
+  .route{max-width:820px;margin:60px auto;padding:0 28px}
+  .route-in{background:var(--ink);color:#fff;border-radius:12px;padding:48px 50px}
+  .route-in .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--sand);margin-bottom:14px;display:block}
+  .route-in h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;margin-bottom:20px}
+  .route-in p{font-size:17px;line-height:1.75;color:rgba(255,255,255,.84);margin-bottom:16px}
+  .route-in p:last-child{margin-bottom:0}
+
+  /* STAY list */
+  .stay{max-width:760px;margin:0 auto;padding:0 28px}
+  .stay-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  .stay-card{border:1px solid var(--line);border-radius:10px;padding:24px;background:var(--paper)}
+  .stay-card h4{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;margin-bottom:6px}
+  .stay-card p{font-size:15px;line-height:1.6;color:var(--soft);margin:0}
+
+  /* ESSENTIALS */
+  .ess{margin-top:96px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
+  .ess .shead{text-align:center;margin-bottom:46px}
+  .ess .shead .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);display:block;margin-bottom:14px}
+  .ess .shead h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500}
+  .ess .shead h2::before{display:none}
+  .ess-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .ess-card{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;padding:22px;border:1px solid var(--line);border-radius:10px;background:var(--bg);transition:.3s}
+  .ess-card:hover{box-shadow:0 14px 36px rgba(27,25,22,.08);border-color:rgba(181,97,60,.4);transform:translateY(-3px)}
+  .ess-card .ic{width:96px;height:96px;border-radius:8px;overflow:hidden;flex:0 0 auto}
+  .ess-card h4{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;margin-bottom:5px}
+  .ess-card p{font-size:13.5px;color:var(--soft);line-height:1.5;margin-bottom:11px}
+  .ess-card .lnk{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:500}
+  .ess .disc{text-align:center;font-size:12px;color:var(--soft);margin-top:28px}
+
+  /* BACK / next */
+  .more{padding:80px 0}
+  .more-in{max-width:760px;margin:0 auto;padding:0 28px;text-align:center}
+  .more .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+  .more h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;margin-bottom:28px}
+  .ghost{display:inline-block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--ink);padding:15px 38px;border-radius:999px;transition:.3s}
+  .ghost:hover{background:var(--ink);color:#fff}
+
+  /* NEWSLETTER */
+  .news{background:var(--clay);color:#fff;padding:96px 0;text-align:center}
+  .news h2{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;margin-bottom:16px}
+  .news p{font-size:17px;opacity:.92;margin-bottom:36px}
+  .field{display:flex;max-width:500px;margin:0 auto;background:#fff;border-radius:999px;padding:7px 7px 7px 24px}
+  .field input{flex:1;border:0;background:transparent;font-family:inherit;font-size:15px;color:var(--ink);outline:none}
+  .field button{border:0;background:var(--ink);color:#fff;font-family:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 28px;border-radius:999px;cursor:pointer;transition:.3s}
+  .field button:hover{background:var(--clay-d)}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#fff;padding:78px 0 44px}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:58px}
+  .fgrid .brand{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:16px}
+  .fgrid p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.65);max-width:260px}
+  .fcol h5{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px}
+  .fcol a{display:block;font-size:14px;color:rgba(255,255,255,.85);margin-bottom:11px}
+  .fcol a:hover{color:var(--sand)}
+  .fbot{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;font-size:12px;color:rgba(255,255,255,.5);display:flex;justify-content:space-between}
+
+  /* reading progress */
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--clay);width:0;z-index:50;transition:width .1s linear}
+
+  @media(max-width:900px){
+    .wrap{padding:0 28px}
+    .ess-grid,.fgrid,.stay-grid{grid-template-columns:1fr}
+    .navlinks{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header id="hdr">
+  <nav class="wrap">
+    <a href="../Faraway Postcards.html" class="brand">Faraway Postcards</a>
+    <div class="navlinks"><a href="../Faraway Postcards.html#featured">Stories</a><a href="../articles.html">Articles</a><a href="../about.html">About</a></div>
+    <a href="#news" class="navcta">Subscribe</a>
+  </nav>
+</header>
+
+<article>
+<section class="a-hero">
+  <div class="bg"><img src="https://errorar0.github.io/faraway-postcards-v2/images/monaco-before-the-world-hero.jpeg" alt="Monaco in the soft early morning light before the city wakes up"></div>
+  <div class="wrap a-hero-in">
+    <div class="crumbs"><a href="../Faraway Postcards.html">Home</a><span class="sep">/</span><a href="../articles.html">Articles</a><span class="sep">/</span><span>Monaco</span></div>
+    <span class="a-cat">Architecture · Monaco</span>
+    <h1 class="cor">The Most Atmospheric Places in Monaco in the Early Morning</h1>
+    <div class="a-meta"><span>Guidebook</span><span>9 min read</span><span>By The Content Team</span></div>
+  </div>
+</section>
+
+<div class="article">
+  <div class="measure">
+    <p class="lede">Monaco reveals itself most clearly before it begins performing.</p>
+    <p class="intro">Monaco is usually described in the language of spectacle: yachts, diamonds, Formula 1, grand hotels, the theatrical curve of Casino Square. But the Principality reveals itself most clearly before it begins performing.</p>
+    <p>If you wake up early enough, Monaco changes its tone. The facades soften. The marble terraces are still cool from the night before. The sea takes on that particular Riviera morning light — clear, almost polished. And for a brief moment, the streets feel strangely personal, as though the entire country has been left unlocked.</p>
+    <p>These are the hours when Monaco is worth seeing properly — before café terraces fill up, before cameras take over the palace square, before the harbor starts shining too loudly with luxury.</p>
+    <p>Early morning gives texture back to the Principality: stone staircases, garden paths, church bells, the smell of coffee near Place d'Armes, the silence of Monaco-Ville before the first tour buses arrive. This guide is dedicated to that version of Monaco — cinematic, atmospheric, and perfectly explored on foot.</p>
+
+    <h2 class="cor">Place du Casino Before the Supercars Arrive</h2>
+    <p>Few urban spaces in Europe understand drama as well as Place du Casino. During the day, it feels more like a showroom for luxury Monaco. At 7:30 in the morning, it becomes quieter and far more beautiful — when all that remains is light, stone, and Belle Époque facades.</p>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/casino-de-monte-carlo-belle-epoque.jpeg" alt="Casino de Monte-Carlo in soft early morning light"></div>
+    <figcaption>Casino de Monte-Carlo in soft early morning light.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>The Casino de Monte-Carlo stands almost motionless, catching the first clean light of the day. Hôtel de Paris feels more like a private palace than a hotel. Café de Paris has not yet filled with voices. The palms are still. The polished stone reflects the sky.</p>
+    <p>This is the best time for photographs without visual noise. Stand near the gardens and look back toward the casino. Then walk slowly toward One Monte-Carlo, where the boutiques are still closed and the entire district feels like a film set between scenes. The real magic of the square comes from contrast — it feels quiet not because it lacks grandeur, but because the grandeur has not fully awakened yet.</p>
+
+    <h2 class="cor">Port Hercule in the Blue Morning Light</h2>
+    <p>Port Hercule is Monaco's grand amphitheater: cliffs, towers, yachts, and the Rock of the old town rising above the water like a backdrop.</p>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/monaco-port-hercule-yachts-morning.jpeg" alt="Port Hercule and yachts in the blue morning light"></div>
+    <figcaption>Port Hercule and yachts in the blue morning light.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>Early in the morning, the harbor feels especially alive — but quietly, almost privately. Yacht crews move without rush. The first delivery vans pass along the quay. The water is often calm enough to become a mirror for masts and high-rises.</p>
+    <p>Walk along the docks slowly. Don't hurry toward the famous viewpoints. The pleasure here is in the details: perfectly coiled ropes, gulls in the morning sky, the smell of salt and fuel, the first espresso cups appearing on café tables. From certain angles, Port Hercule shows the entire idea of Monaco at once — the old fortress above, modern towers behind it, enormous yachts below, and the Mediterranean holding everything together.</p>
+
+    <h2 class="cor">La Condamine Market — The Moment Monaco Becomes Local</h2>
+    <p>For all its international luxury, Monaco still has its own morning rituals. La Condamine is where you feel them. Place d'Armes wakes earlier than the rest of the city. Fruit stalls open one by one. Regular visitors arrive with familiar ease. Coffee is served quickly. Conversations remain low and calm.</p>
+    <p>This market is not rustic in the Provençal sense — this is still Monaco. But it has warmth, rhythm, and the rare feeling that people genuinely live here. Come here not for sightseeing, but for breakfast. Order coffee and something simple, sit down, and watch the square slowly assemble itself. This is the antidote to postcard Monaco. Here, the Principality feels real.</p>
+
+    <h2 class="cor">Rampe Major — The Most Cinematic Climb in Monaco</h2>
+    <p>The walk up to Monaco-Ville is short, but it completely changes the mood of the city. Rampe Major rises from the Condamine district toward the Rock, running alongside old defensive walls. In the morning, before the tour groups arrive, the climb feels almost cinematic: pale stone, sharp shadows, sudden flashes of blue harbor behind you.</p>
+    <p>It is one of the best transitions in Monaco. Below is the busy market district. A little higher, the port opens wider and wider. At the top, the old Principality appears: palace square, narrow streets, ochre facades, and quiet shutters. Do not rush this walk. Turn around often.</p>
+
+    <h2 class="cor">Place du Palais Before the Changing of the Guard</h2>
+    <p>Place du Palais is one of those squares that depends entirely on timing.</p>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/princes-palace-monaco-morning.jpeg" alt="Prince's Palace of Monaco in the morning before the crowds arrive"></div>
+    <figcaption>Prince's Palace of Monaco in the morning, before the crowds arrive.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>Arrive later in the day and you'll find crowds waiting for the changing of the guard ceremony. Arrive early and the palace feels almost silent. Prince's Palace is less theatrical than Casino Square, but far more significant. This is the historical heart of Monaco — the place where the Principality feels older than its reputation.</p>
+    <p>The morning light works beautifully here. It warms the stone facade and opens the view toward Port Hercule. Walk to the edge of the square and look down: the harbor suddenly feels miniature, the yachts reduced to white brushstrokes on the water.</p>
+
+    <h2 class="cor">Monaco-Ville Before the Tour Groups Arrive</h2>
+    <p>Monaco-Ville is often called "Le Rocher" — the Rock — and it genuinely feels like a separate town suspended above the sea. Narrow streets, pastel facades, small restaurants preparing for lunch, the smell of baked bread and salt in the air. In the morning, the district has an almost vanished kind of European elegance.</p>
+    <p>Early morning is what makes this neighborhood special. Later in the day, guided tours arrive and the atmosphere changes completely. Walk without a plan. Let the streets lead you toward the cathedral, then toward the gardens, then back to another viewpoint. This is no longer Monaco of speed. This is Monaco of stone, monarchy, memory, and church bells.</p>
+
+    <h2 class="cor">Saint-Martin Gardens — Sea, Air, and Silence</h2>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/saint-martin-gardens-sea-view.jpeg" alt="Sea view from Saint-Martin Gardens in Monaco"></div>
+    <figcaption>The Mediterranean seen from the Saint-Martin Gardens.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>Saint-Martin Gardens are one of the most graceful places in Monaco early in the morning. The gardens stretch along the Rock beside the Oceanographic Museum and offer shaded paths, sculptures, and wide Mediterranean views.</p>
+    <p>In a country known for density, these gardens feel surprisingly spacious. Come before the museum opens. The paths are still empty, the benches unoccupied, and the sea below the cliffs feels endless.</p>
+
+    <h2 class="cor">The Oceanographic Museum and Its Terraces</h2>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/monaco-oceanographic-museum-morning.jpeg" alt="Oceanographic Museum of Monaco in the morning light"></div>
+    <figcaption>The Oceanographic Museum, seeming to grow out of the cliff itself.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>Even if you do not plan to go inside, the Oceanographic Museum is worth seeing in the morning. The building seems to grow directly out of the cliff itself, as though carved from the same stone holding Monaco above the sea. In the morning light, the facade becomes almost golden.</p>
+    <p>The museum terraces offer some of the best views along the coast. This is where you truly feel the edge of the land — the moment stone ends and the sea begins.</p>
+
+    <h2 class="cor">Larvotto Beach Before the Heat</h2>
+    <p>Larvotto is Monaco's easiest seaside pleasure, and it looks best in the morning. Before the beach clubs fully wake up, the promenade stays calm. Runners pass by, early swimmers enter the water, and the sea remains perfectly clear.</p>
+    <p>Monaco often feels vertical and polished. Larvotto feels the opposite: horizontal and almost elemental. Sometimes sitting here for forty quiet minutes before breakfast is enough.</p>
+
+    <h2 class="cor">The Princess Grace Japanese Garden</h2>
+    <p>The Japanese Garden feels unexpectedly delicate and quiet for a place like Monaco. It works not through extravagance, but through restraint: water, stone, bridges, reflections, and perfectly composed lines.</p>
+    <p>In the morning, the garden becomes especially beautiful. The light is softer, the paths are empty, and the surrounding high-rises seem to dissolve into the background.</p>
+
+    <h2 class="cor">Jardins de la Petite Afrique</h2>
+    <p>Hidden beside Monte-Carlo's most luxurious addresses is one of the most elegant corners of Monaco in the early morning. Palms and exotic plants create a soft green barrier around Casino Square. It is the perfect place to pause after walking through the district and simply watch the city wake up.</p>
+
+    <h2 class="cor">The Exotic Garden and the View Above Monaco</h2>
+    <p>The Exotic Garden has always been one of Monaco's great panoramic viewpoints.</p>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/monaco-vertical-cityscape.jpeg" alt="Vertical cityscape of Monaco seen from above"></div>
+    <figcaption>Monaco from above — cliffs, towers and sea in an impossibly small space.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>After its renovation and reopening, early morning once again became the best time to visit. From here, Monaco looks almost impossible: cliffs, towers, terraces, and sea compressed into an incredibly small space.</p>
+
+    <h2 class="cor">Fontvieille Harbor — A Quieter Side of Monaco</h2>
+    <p>Fontvieille is far less theatrical than Port Hercule, and that is exactly its charm. In the morning, the harbor feels residential and calm. Yachts sit quietly in the marina, terraces catch the sunlight, and the district feels more lived-in and genuine. This is the place for travelers who want to see Monaco without the constant performance of luxury.</p>
+
+    <h2 class="cor">The Princess Grace Rose Garden</h2>
+    <p>The Princess Grace Rose Garden is one of Monaco's softest morning spaces. Its beauty is delicate: roses, pathways, quietness, and a feeling of memory. In the morning, the flowers smell stronger, the air feels cooler, and the colors become richer.</p>
+
+    <h2 class="cor">Monaco's Lifts and Staircases</h2>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/monaco-riviera-coastal-road.jpeg" alt="A Riviera coastal road and vertical Monaco landscape"></div>
+    <figcaption>Moving vertically through Monaco turns a walk into a sequence of reveals.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>One of Monaco's most underrated pleasures is moving vertically through the city. Lifts, staircases, and passageways turn an ordinary walk into a sequence of cinematic reveals. You step into an elevator beside a road, exit near a garden, and suddenly the sea appears far below you. In Monaco, movement itself becomes part of the experience.</p>
+  </div>
+
+  <div class="route">
+    <div class="route-in">
+      <span class="eyebrow">The Perfect Early-Morning Route</span>
+      <h3 class="cor">Monaco in layers, on foot</h3>
+      <p>Start at Place du Casino around 7:15 AM. Walk through Jardins de la Petite Afrique and descend toward Port Hercule.</p>
+      <p>Then head to La Condamine Market for breakfast before climbing Rampe Major into Monaco-Ville. Spend the late morning around the palace square, the old town, Saint-Martin Gardens, and the Oceanographic Museum.</p>
+      <p>This route reveals Monaco in layers: luxury, harbor, market, old town, sea, and cliffs.</p>
+    </div>
+  </div>
+
+  <div class="stay">
+    <h2 class="cor" style="text-align:left">Where to Stay for Atmospheric Mornings</h2>
+    <div class="stay-grid">
+      <div class="stay-card"><h4 class="cor">Monte-Carlo</h4><p>The best choice for a first visit and cinematic walks.</p></div>
+      <div class="stay-card"><h4 class="cor">Fontvieille</h4><p>Quieter and more residential, away from the performance.</p></div>
+      <div class="stay-card"><h4 class="cor">Larvotto</h4><p>Ideal for morning swims and a slower coastal rhythm.</p></div>
+      <div class="stay-card"><h4 class="cor">Monaco-Ville</h4><p>Best for historical atmosphere and panoramic views.</p></div>
+    </div>
+
+    <h2 class="cor" style="text-align:left">Final Thought</h2>
+  </div>
+
+  <figure class="wide">
+    <div class="fr"><img src="https://errorar0.github.io/faraway-postcards-v2/images/monaco-coastal-seagull.jpeg" alt="A seagull over the Monaco coastline in the morning"></div>
+    <figcaption>A seagull over the Monaco coastline, early in the morning.</figcaption>
+  </figure>
+
+  <div class="measure">
+    <p>Monaco rewards precision. The same square can feel loud or magnificent depending entirely on the hour. Early morning removes the obviousness from the Principality. It stops being only about wealth and begins speaking through light, stone, sea, gardens, and scale.</p>
+    <p>That is the version of Monaco worth waking up for.</p>
+  </div>
+</div>
+</article>
+
+<section class="ess">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Travel Essentials</span>
+      <h2 class="cor">Plan your own Monaco morning</h2>
+    </div>
+    <div class="ess-grid">
+      <a href="#" class="ess-card">
+        <div class="ic"><img src="https://picsum.photos/seed/tripcom/200/200" alt=""></div>
+        <div><h4 class="cor">Trip.com</h4><p>Hotels, flights, trains &amp; travel deals in one place.</p><span class="lnk">Plan your stay →</span></div>
+      </a>
+      <a href="#" class="ess-card">
+        <div class="ic"><img src="https://picsum.photos/seed/travelgear/200/200" alt=""></div>
+        <div><h4 class="cor">Travel Gear</h4><p>Quietly excellent kit — buy now and pay later.</p><span class="lnk">Shop essentials →</span></div>
+      </a>
+      <a href="#" class="ess-card">
+        <div class="ic"><img src="https://picsum.photos/seed/klook/200/200" alt=""></div>
+        <div><h4 class="cor">Klook</h4><p>Activities, tours &amp; city passes for every destination.</p><span class="lnk">Find things to do →</span></div>
+      </a>
+    </div>
+    <p class="disc">Some links are affiliate links — they help keep Faraway Postcards independent, at no cost to you.</p>
+  </div>
+</section>
+
+<section class="more">
+  <div class="more-in">
+    <div class="eyebrow">Keep wandering</div>
+    <h3 class="cor">More stories are on the way</h3>
+    <a href="../articles.html" class="ghost">Browse all stories</a>
+  </div>
+</section>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <h2 class="cor">Join the Journey</h2>
+    <p>Get atmospheric travel stories and new destination ideas, a few times a season.</p>
+    <form class="field" onsubmit="return false">
+      <input type="email" placeholder="your@email.com">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><div class="brand">Faraway Postcards</div><p>An independent travel journal about places that feel different — written slowly, from the road.</p></div>
+      <div class="fcol"><h5>Explore</h5><a href="../Faraway Postcards.html">Home</a><a href="../articles.html">Articles</a><a href="../about.html">About</a></div>
+      <div class="fcol"><h5>Categories</h5><a href="../articles.html">Guidebook</a><a href="../articles.html">Food</a><a href="../articles.html">Wildlife</a><a href="../articles.html">Architecture</a></div>
+      <div class="fcol"><h5>Connect</h5><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">YouTube</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Faraway Postcards. All rights reserved.</span></div>
+  </div>
+</footer>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    hdr.classList.toggle('solid', window.scrollY>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  document.querySelectorAll('a[href="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();});});
+</script>
+</body>
+</html>
