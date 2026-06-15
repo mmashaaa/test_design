@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Faraway Postcards</title>
+<meta name="description" content="About Faraway Postcards — a calm independent travel journal about places, atmosphere, timing, and memorable travel experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#FAF7F1;--paper:#fff;--ink:#1B1916;--soft:#6F675D;--line:rgba(27,25,22,.12);--clay:#B5613C;--clay-d:#9a4f30;--sand:#ECC9A6;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+  .cor{font-family:'Cormorant Garamond',serif}
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:40;transition:.4s;border-bottom:1px solid transparent}
+  header.solid{background:rgba(250,247,241,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:84px;color:#fff;transition:color .4s}
+  header.solid nav{color:var(--ink)}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500}
+  .navlinks{display:flex;gap:42px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  .navlinks a{opacity:.85;transition:.25s}.navlinks a:hover{opacity:1;color:var(--clay)}
+  .navcta{font-size:12px;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.55);padding:11px 22px;border-radius:999px;transition:.3s}
+  header.solid .navcta{border-color:var(--ink)}
+  .navcta:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+
+  .a-hero{position:relative;height:64vh;min-height:420px;max-height:560px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+  .a-hero .bg{position:absolute;inset:0}
+  .a-hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.5),rgba(20,16,12,.62))}
+  .a-hero-in{position:relative;z-index:2;color:#fff;max-width:840px;padding:0 40px}
+  .a-hero .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:22px}
+  .a-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,6vw,80px);line-height:1.02;font-weight:500;margin-bottom:18px}
+  .a-hero p{font-size:19px;color:rgba(255,255,255,.9);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:24px}
+
+  .body{padding:90px 0}
+  .measure{max-width:760px;margin:0 auto;padding:0 28px}
+  .body h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;line-height:1.12;margin:52px 0 20px}
+  .body h2:first-child{margin-top:0}
+  .body h2::before{content:"";display:block;width:48px;height:3px;background:var(--clay);margin-bottom:20px}
+  .body p{font-size:18.5px;line-height:1.78;color:#34302a;margin-bottom:24px}
+  .body .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:27px;line-height:1.45;color:var(--ink);margin:14px 0 28px;padding-left:26px;border-left:3px solid var(--clay)}
+
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);max-width:980px;margin:60px auto 0}
+  .stat{text-align:center;padding:46px 24px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .stat .n{font-family:'Cormorant Garamond',serif;font-size:56px;line-height:1;color:var(--clay)}
+  .stat .l{margin-top:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+
+  .news{background:var(--clay);color:#fff;padding:96px 0;text-align:center}
+  .news h2{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;margin-bottom:16px}
+  .news p{font-size:17px;opacity:.92;margin-bottom:36px}
+  .field{display:flex;max-width:500px;margin:0 auto;background:#fff;border-radius:999px;padding:7px 7px 7px 24px}
+  .field input{flex:1;border:0;background:transparent;font-family:inherit;font-size:15px;color:var(--ink);outline:none}
+  .field button{border:0;background:var(--ink);color:#fff;font-family:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 28px;border-radius:999px;cursor:pointer;transition:.3s}
+  .field button:hover{background:var(--clay-d)}
+
+  footer{background:var(--ink);color:#fff;padding:78px 0 44px}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:58px}
+  .fgrid .brand{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:16px}
+  .fgrid p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.65);max-width:260px}
+  .fcol h5{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px}
+  .fcol a{display:block;font-size:14px;color:rgba(255,255,255,.85);margin-bottom:11px}.fcol a:hover{color:var(--sand)}
+  .fbot{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;font-size:12px;color:rgba(255,255,255,.5);display:flex;justify-content:space-between}
+
+  @media(max-width:900px){.wrap{padding:0 28px}.fgrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.navlinks{display:none}}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <nav class="wrap">
+    <a href="Faraway Postcards.html" class="brand">Faraway Postcards</a>
+    <div class="navlinks"><a href="Faraway Postcards.html#featured">Stories</a><a href="articles.html">Articles</a><a href="about.html">About</a></div>
+    <a href="#news" class="navcta">Subscribe</a>
+  </nav>
+</header>
+
+<section class="a-hero">
+  <div class="bg"><img src="https://picsum.photos/seed/aboutfog/1800/900" alt=""></div>
+  <div class="a-hero-in">
+    <div class="eyebrow">About Faraway Postcards</div>
+    <h1 class="cor">Places where the world feels different</h1>
+    <p class="cor">A calm, independent travel journal.</p>
+  </div>
+</section>
+
+<div class="body">
+  <div class="measure">
+    <h2 class="cor">Why We Created Faraway Postcards</h2>
+    <p>Faraway Postcards was created for a specific kind of traveler — the one who remembers not only where they went, but how a place felt at a particular hour, in a particular season, before it changed.</p>
+    <p>Not every destination deserves a flight across the world. Some places are beautiful in photographs and strangely empty in reality. Others reveal themselves only briefly: during a foggy month, a disappearing season, a midnight food market, a storm rolling over a coastline, or the quiet years before tourism reshapes everything around them. This site exists to help people find those moments.</p>
+    <p>We write about places that feel atmospheric, cinematic, emotionally disorienting, or unexpectedly alive — not simply because they are famous, but because they create a rare sense of presence. Sometimes that means remote landscapes and unusual natural phenomena. Sometimes it means architecture, weather, light, silence, or a bowl of noodles eaten at exactly the right hour in a city most people rush through too quickly.</p>
+    <p>Faraway Postcards is not a backpacker wiki, a luxury travel magazine, or a generic SEO-driven travel blog. We are less interested in collecting landmarks and more interested in atmosphere, timing, and the details that shape how a place is remembered years later.</p>
+
+    <h2 class="cor">What We Look For</h2>
+    <p>Every article on this site is built around a simple question:</p>
+    <div class="q">What makes this place worth experiencing in a particular moment?</div>
+    <p>Sometimes the answer is seasonal. Sometimes atmospheric. Sometimes cultural. Sometimes deeply personal. We look for places and experiences that feel difficult to replicate: landscapes that seem almost unreal, disappearing traditions and fragile atmospheres, rare seasons and short-lived natural phenomena, cities that transform completely after dark, unforgettable meals connected to a specific place and hour, hidden corners that still feel untouched, and destinations where timing changes everything.</p>
+    <p>Many of the places we write about are not necessarily the most famous — and that is often the point. We are drawn to places that still feel distinct, layered, quiet, strange, or emotionally memorable long after the trip itself is over.</p>
+
+    <h2 class="cor">Our Philosophy of Travel</h2>
+    <p>We believe travel writing should be both immersive and genuinely useful. Beautiful photography alone rarely tells you when a place feels most alive, which season changes the atmosphere entirely, what time of day transforms a city, or which experiences are quietly overrated despite appearing everywhere online.</p>
+    <p>That is why our articles combine atmospheric storytelling, visual detail, practical travel advice, honest observations, and thoughtful timing recommendations grounded in real experience. We are not interested in selling destinations at any cost or turning every place into a "hidden gem." If somewhere feels overcrowded, performative, or disconnected from what once made it special, we will say so honestly.</p>
+    <p>Faraway Postcards is designed to feel slower, calmer, and more intentional than the endless stream of interchangeable travel content online.</p>
+
+    <h2 class="cor">Why Timing Matters</h2>
+    <p>Some places are inseparable from a particular season, weather pattern, hour, or state of atmosphere. A coastal town in heavy fog can feel like an entirely different world than it does under clear skies. A market before sunrise carries a different energy than the same streets at noon. Certain landscapes become unforgettable only for a few weeks each year, while others are best experienced in the quieter periods between tourist seasons.</p>
+    <p>We believe timing shapes memory more than people expect. Not just where you go — but when you arrive, how long you stay, what the air feels like, how the light moves through a street, or how a place changes once the crowds disappear.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n cor">14</div><div class="l">Years on the road</div></div>
+    <div class="stat"><div class="n cor">90+</div><div class="l">Countries mapped</div></div>
+    <div class="stat"><div class="n cor">Slow</div><div class="l">By design</div></div>
+  </div>
+</div>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <h2 class="cor">Join the Journey</h2>
+    <p>Get atmospheric travel stories and new destination ideas, a few times a season.</p>
+    <form class="field" onsubmit="return false">
+      <input type="email" placeholder="your@email.com">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><div class="brand">Faraway Postcards</div><p>An independent travel journal about places that feel different — written slowly, from the road.</p></div>
+      <div class="fcol"><h5>Explore</h5><a href="Faraway Postcards.html">Home</a><a href="articles.html">Articles</a><a href="about.html">About</a></div>
+      <div class="fcol"><h5>Categories</h5><a href="articles.html">Guidebook</a><a href="articles.html">Food</a><a href="articles.html">Wildlife</a><a href="articles.html">Architecture</a></div>
+      <div class="fcol"><h5>Connect</h5><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">YouTube</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Faraway Postcards. All rights reserved.</span></div>
+  </div>
+</footer>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  function onScroll(){hdr.classList.toggle('solid',window.scrollY>40);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  document.querySelectorAll('a[href="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();});});
+</script>
+</body>
+</html>

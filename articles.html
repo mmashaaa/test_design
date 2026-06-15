@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Stories — Faraway Postcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#FAF7F1;--paper:#fff;--ink:#1B1916;--soft:#6F675D;--line:rgba(27,25,22,.12);--clay:#B5613C;--clay-d:#9a4f30;--sand:#ECC9A6;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+  .cor{font-family:'Cormorant Garamond',serif}
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(250,247,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:84px;color:var(--ink)}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500}
+  .navlinks{display:flex;gap:42px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  .navlinks a{color:var(--soft);transition:.25s}.navlinks a:hover{color:var(--clay)}
+  .navcta{font-size:12px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--ink);padding:11px 22px;border-radius:999px;transition:.3s}
+  .navcta:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+
+  .phead{text-align:center;padding:80px 0 12px}
+  .phead .eyebrow{color:var(--clay);margin-bottom:16px}
+  .phead h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,6vw,76px);font-weight:500;line-height:1.02}
+  .phead p{font-size:17px;color:var(--soft);margin-top:14px}
+
+  .cats{padding:30px 0;position:sticky;top:84px;z-index:30;background:rgba(250,247,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .cats-in{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .pill{font-size:13px;letter-spacing:.06em;padding:10px 22px;border:1px solid var(--line);border-radius:999px;color:var(--soft);transition:.25s;cursor:pointer;background:transparent}
+  .pill:hover{border-color:var(--clay);color:var(--clay)}
+  .pill.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  .gal-wrap{padding:64px 0 96px}
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:42px 30px}
+  .g-card{transition:opacity .3s}
+  .g-card a.cardlink{display:block;cursor:pointer}
+  .g-ph{aspect-ratio:4/5;overflow:hidden;position:relative;border-radius:4px;margin-bottom:20px}
+  .g-ph img{transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .g-card a.cardlink:hover .g-ph img{transform:scale(1.06)}
+  .g-ph .num{position:absolute;top:16px;left:18px;color:#fff;font-family:'Cormorant Garamond',serif;font-size:22px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  .g-ph .soon{position:absolute;top:14px;right:14px;background:rgba(27,25,22,.78);color:#fff;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:7px 13px;border-radius:999px;backdrop-filter:blur(4px)}
+  .g-card.coming .g-ph img{filter:grayscale(.35) brightness(.94)}
+  .g-card.coming{opacity:.78}
+  .g-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);margin-bottom:10px}
+  .g-card h3{font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.18;font-weight:500;margin-bottom:9px}
+  .g-card p{font-size:14.5px;line-height:1.65;color:var(--soft)}
+  .g-card .rd{margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);border-top:1px solid var(--line);padding-top:13px}
+  .g-card.hide{display:none}
+  .empty-note{display:none;text-align:center;color:var(--soft);font-size:16px;padding:50px 0}
+  .empty-note.show{display:block}
+
+  .news{background:var(--clay);color:#fff;padding:96px 0;text-align:center}
+  .news h2{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;margin-bottom:16px}
+  .news p{font-size:17px;opacity:.92;margin-bottom:36px}
+  .field{display:flex;max-width:500px;margin:0 auto;background:#fff;border-radius:999px;padding:7px 7px 7px 24px}
+  .field input{flex:1;border:0;background:transparent;font-family:inherit;font-size:15px;color:var(--ink);outline:none}
+  .field button{border:0;background:var(--ink);color:#fff;font-family:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 28px;border-radius:999px;cursor:pointer;transition:.3s}
+  .field button:hover{background:var(--clay-d)}
+
+  footer{background:var(--ink);color:#fff;padding:78px 0 44px}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:58px}
+  .fgrid .brand{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:16px}
+  .fgrid p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.65);max-width:260px}
+  .fcol h5{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px}
+  .fcol a{display:block;font-size:14px;color:rgba(255,255,255,.85);margin-bottom:11px}.fcol a:hover{color:var(--sand)}
+  .fbot{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;font-size:12px;color:rgba(255,255,255,.5);display:flex;justify-content:space-between}
+
+  @media(max-width:900px){.wrap{padding:0 28px}.gal{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr}.navlinks{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="Faraway Postcards.html" class="brand">Faraway Postcards</a>
+    <div class="navlinks"><a href="Faraway Postcards.html#featured">Stories</a><a href="articles.html">Articles</a><a href="about.html">About</a></div>
+    <a href="#news" class="navcta">Subscribe</a>
+  </nav>
+</header>
+
+<div class="phead">
+  <div class="eyebrow">The Collection</div>
+  <h1 class="cor">All Stories</h1>
+  <p>Atmospheric guides and travel notes — a new postcard every week.</p>
+</div>
+
+<section class="cats">
+  <div class="wrap">
+    <div class="cats-in" id="cats">
+      <button class="pill on" data-cat="all">All</button>
+      <button class="pill" data-cat="guidebook">Guidebook</button>
+      <button class="pill" data-cat="food">Food</button>
+      <button class="pill" data-cat="wildlife">Wildlife</button>
+      <button class="pill" data-cat="architecture">Architecture</button>
+      <button class="pill" data-cat="best-time">Best Time to Visit</button>
+      <button class="pill" data-cat="unesco">UNESCO</button>
+    </div>
+  </div>
+</section>
+
+<div class="gal-wrap">
+  <div class="wrap">
+    <div class="gal" id="gal">
+      <article class="g-card" data-cat="architecture">
+        <a class="cardlink" href="articles/the-most-atmospheric-places-in-monaco-in-the-early-morning.html">
+          <div class="g-ph"><img src="https://errorar0.github.io/faraway-postcards-v2/images/monaco-before-the-world-hero.jpeg" alt=""><span class="num">01</span></div>
+          <div class="g-tag">Architecture · Monaco</div>
+          <h3 class="cor">The Most Atmospheric Places in Monaco in the Early Morning</h3>
+          <p>A slow, cinematic walk through the Principality before the crowds arrive.</p>
+          <div class="rd">9 min read</div>
+        </a>
+      </article>
+      <article class="g-card coming" data-cat="wildlife">
+        <div class="g-ph"><img src="https://picsum.photos/seed/faroefog/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">Wildlife · Faroe Islands</div>
+        <h3 class="cor">Where the Faroe Islands Disappear Into Fog</h3>
+        <p>Grass roofs, sea cliffs, and weather that rewrites the plan every hour.</p>
+        <div class="rd">In the works</div>
+      </article>
+      <article class="g-card coming" data-cat="food">
+        <div class="g-ph"><img src="https://picsum.photos/seed/sansebastian/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">Food · Spain</div>
+        <h3 class="cor">A Slow Table in San Sebastián</h3>
+        <p>Pintxos, cider houses, and the lunch that quietly becomes an afternoon.</p>
+        <div class="rd">In the works</div>
+      </article>
+      <article class="g-card coming" data-cat="guidebook">
+        <div class="g-ph"><img src="https://picsum.photos/seed/icelandroad/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">Guidebook · Iceland</div>
+        <h3 class="cor">Driving the Empty Roads of Northern Iceland</h3>
+        <p>The route most travelers skip — and the silence that waits there.</p>
+        <div class="rd">In the works</div>
+      </article>
+      <article class="g-card coming" data-cat="wildlife">
+        <div class="g-ph"><img src="https://picsum.photos/seed/lofotenlight/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">Wildlife · Norway</div>
+        <h3 class="cor">Following the Light in the Lofoten Islands</h3>
+        <p>Fishing villages, midnight sun, and a coastline that never quite sleeps.</p>
+        <div class="rd">In the works</div>
+      </article>
+      <article class="g-card coming" data-cat="best-time">
+        <div class="g-ph"><img src="https://picsum.photos/seed/kyotocherry/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">Best Time · Japan</div>
+        <h3 class="cor">Cherry Season in a Quiet Corner of Kyoto</h3>
+        <p>Away from the famous gardens, the bloom keeps its own calendar.</p>
+        <div class="rd">In the works</div>
+      </article>
+      <article class="g-card coming" data-cat="food">
+        <div class="g-ph"><img src="https://picsum.photos/seed/marrakech/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">Food · Morocco</div>
+        <h3 class="cor">Markets Before Dawn in Marrakech</h3>
+        <p>The medina at its most honest hour, before the first tour arrives.</p>
+        <div class="rd">In the works</div>
+      </article>
+      <article class="g-card coming" data-cat="unesco">
+        <div class="g-ph"><img src="https://picsum.photos/seed/hallstatt/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">UNESCO · Austria</div>
+        <h3 class="cor">The Lakeside Hush of Hallstatt</h3>
+        <p>A village time forgot — best visited in the quiet of early spring.</p>
+        <div class="rd">In the works</div>
+      </article>
+      <article class="g-card coming" data-cat="wildlife">
+        <div class="g-ph"><img src="https://picsum.photos/seed/patagoniawild2/700/875" alt=""><span class="soon">Coming soon</span></div>
+        <div class="g-tag">Wildlife · Patagonia</div>
+        <h3 class="cor">The Last Wild Coast of Patagonia</h3>
+        <p>Where the road finally ends and the wind takes over entirely.</p>
+        <div class="rd">In the works</div>
+      </article>
+    </div>
+    <div class="empty-note" id="empty">No stories in this category yet — new postcards arrive every week.</div>
+  </div>
+</div>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <h2 class="cor">Join the Journey</h2>
+    <p>Get atmospheric travel stories and new destination ideas, a few times a season.</p>
+    <form class="field" onsubmit="return false">
+      <input type="email" placeholder="your@email.com">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><div class="brand">Faraway Postcards</div><p>An independent travel journal about places that feel different — written slowly, from the road.</p></div>
+      <div class="fcol"><h5>Explore</h5><a href="Faraway Postcards.html">Home</a><a href="articles.html">Articles</a><a href="about.html">About</a></div>
+      <div class="fcol"><h5>Categories</h5><a href="articles.html">Guidebook</a><a href="articles.html">Food</a><a href="articles.html">Wildlife</a><a href="articles.html">Architecture</a></div>
+      <div class="fcol"><h5>Connect</h5><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">YouTube</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Faraway Postcards. All rights reserved.</span></div>
+  </div>
+</footer>
+
+<script>
+  var cats=document.getElementById('cats');
+  var cards=[].slice.call(document.querySelectorAll('#gal .g-card'));
+  var empty=document.getElementById('empty');
+  cats.addEventListener('click',function(e){
+    var btn=e.target.closest('.pill'); if(!btn) return;
+    [].forEach.call(cats.children,function(b){b.classList.toggle('on',b===btn);});
+    var cat=btn.getAttribute('data-cat');
+    var shown=0;
+    cards.forEach(function(c){
+      var match=(cat==='all'||c.getAttribute('data-cat')===cat);
+      c.classList.toggle('hide',!match);
+      if(match) shown++;
+    });
+    empty.classList.toggle('show',shown===0);
+  });
+  document.querySelectorAll('a[href="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();});});
+</script>
+</body>
+</html>
